@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Comparison Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Algorithm Comparison Tool</h1>
+            <p>Compare different algorithms for Knapsack and Traveling Salesman Problems</p>
+        </header>
+        <main>
+            <section class="intro">
+                <h2>Welcome</h2>
+                <p>This tool implements and compares various algorithms:</p>
+                <ul>
+                    <li><strong>Greedy</strong>: Fast but may not be optimal</li>
+                    <li><strong>Dynamic Programming</strong>: Optimal solutions with higher time complexity</li>
+                    <li><strong>Backtracking</strong>: Brute force approach</li>
+                    <li><strong>Branch & Bound</strong>: Optimized search with bounds</li>
+                    <li><strong>Divide & Conquer</strong>: Recursive splitting</li>
+                </ul>
+                <p>Problems solved:</p>
+                <ul>
+                    <li><strong>0/1 Knapsack</strong>: Select items to maximize value without exceeding weight capacity</li>
+                    <li><strong>TSP</strong>: Find the shortest tour visiting each city once</li>
+                </ul>
+            </section>
+            <form action="/run" method="post">
+                <button type="submit" class="run-btn">Run Algorithms</button>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
